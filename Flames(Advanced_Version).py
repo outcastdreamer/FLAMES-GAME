@@ -93,11 +93,78 @@ for i in range(len(l2)):
 print ("\n\nFinal Count : ",final_count)
 
 
-"""
+
 F="FLAMES"
 FLAMES=[i for i in F]
 copy=[]
-new_FLAMES=[]
-while (FLAMES.count("-")!=5):
-	mod=(final_count%6)-1
-"""
+copy1=[]
+i=len(FLAMES)
+k=(final_count%len(FLAMES))
+if k==0:
+	k=len(FLAMES)-1
+else:
+	k-=1
+print ("=============================>Temp FLAMES is : ",FLAMES)
+
+while i!=1:
+	print ("\n\tk is : ",k)
+	print ("Element pop is : ",FLAMES[k])
+	FLAMES.pop(k)
+	print ("\t\tNew Length of FLAMES : ",len(FLAMES))
+	if k==len(FLAMES) or k==0:
+		z=0
+		while len(copy)!=len(FLAMES):
+			copy+=FLAMES[z]
+			z+=1
+		FLAMES+=copy
+	else:
+		k1=k
+		k2=0
+		print ("\t\t\tNew k is : ",k)
+		p=FLAMES.index(FLAMES[-1])
+		print ("->p is :",p,"\tElement at p : ",FLAMES[p])
+		while len(copy)!=p:
+			copy.append(FLAMES[k1])
+			print ("Copy is : ",copy,"\tk1 is : ",k1)
+			if copy[-1]==FLAMES[p]:
+				break
+			else:
+				k1+=1
+		print("\n")
+		p1=FLAMES.index(FLAMES[k])
+		print ("->p1 is : ",p1,"\tElement at p1 : ",FLAMES[p1])
+		while len(copy1)!=p1:
+			copy1.append(FLAMES[k2])
+			print ("Copy1 is : ",copy1,"\tk2 is : ",k2)
+			if copy1[-1]==FLAMES[p1]:
+				break
+			else:
+				k2+=1
+	FLAMES=[]
+	FLAMES=copy+copy1
+	print ("=============================>Temp FLAMES is : ",FLAMES)
+	print ("\t\tLength of FLAMES : ",len(FLAMES))
+	copy=[];copy1=[]
+	k=(final_count%len(FLAMES))
+	if k==0:
+		k=len(FLAMES)-1
+	else:
+		k-=1
+	i=len(FLAMES)
+
+print ("\n\n\t\t\t\t\tFINAL FLAMES : ",FLAMES)
+
+print ("\n\n\n\t\t\t\t\tHi, %s and %s!! Your results are below : "%(name1,name2))
+
+if FLAMES[0]=="F":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both are FRIENDS!! :) \n\n\n\n\n\n\n\n")
+elif FLAMES[0]=="L":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both are LOVERS!! ♥‿♥ \n\n\n\n\n\n\n\n")
+elif FLAMES[0]=="A":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both have an AFFAIR!! 😈 \n\n\n\n\n\n\n\n")
+elif FLAMES[0]=="M":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both will MARRY!! :O \n\n\n\n\n\n\n\n")
+elif FLAMES[0]=="E":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both are ENEMIES!! :( \n\n\n\n\n\n\n\n")
+elif FLAMES[0]=="S":
+	print ("\n\n\n\t\t\t\t\t\t\tYou both are into SEXXX!! ( ͡° ͜ʖ ͡°) \n\n\n\n\n\n\n\n")
