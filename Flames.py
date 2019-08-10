@@ -163,4 +163,4 @@ elif FLAMES[0]=="M":
 elif FLAMES[0]=="E":
 	print ("\n\n\n\t\t\t\t\t\t\tYou both are ENEMIES!! :( \n\n\n\n\n\n\n\n")
 elif FLAMES[0]=="S":
-	print ("\n\n\n\t\t\t\t\t\t\tYou both are into SEXXX!! ( ͡° ͜ʖ ͡°) \n\n\n\n\n\n\n\n")
+	print ("\n\n\n\t\t\t\t\t\t\tYou both are SIBLINGS!! ( ͡° ͜ʖ ͡°) \n\n\n\n\n\n\n\n")
